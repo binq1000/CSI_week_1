@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">CSI_week_1</string>
+    <string name="action_settings">Settings</string>
+    <string name="description">Hacker</string>
+    <string name="nameText">Name: </string>
+    <string name="genderText">Gender: </string>
+    <string name="ageText">Age: </string>
+    <string name="bountyText">Bounty: </string>
+    <string name="name">Hack</string>
+    <string name="gender">Male</string>
+    <string name="age">25</string>
+    <string name="bounty">2Mil</string>
+
+    <string name="detailsText">Details</string>
+    <string name="details">Dit is hack, hack is een hacker die hackt. hij is een man van 25 en is zo gevaarlijk dat er 2 miljoen op zijn hoofd staat, dood of levend.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec dignissim leo. Curabitur semper metus lacus, a ornare purus laoreet vel. Vivamus ullamcorper enim sed orci accumsan, vitae imperdiet lectus posuere. Etiam sollicitudin massa non lacus consectetur scelerisque. Pellentesque velit purus, commodo in volutpat a, aliquet et lacus. Integer malesuada finibus luctus. Phasellus ut dapibus tellus. Donec venenatis volutpat euismod. Nunc tempor odio accumsan massa pretium, fermentum sagittis enim viverra. Nulla a finibus dolor. Donec eu augue ornare, efficitur eros non, aliquam risus. Integer non libero id dui mollis placerat sed at nunc. Maecenas id mi ut lacus hendrerit fringilla sit amet bibendum tortor. Integer feugiat, urna eu consequat scelerisque, erat mauris mattis nulla, vel pretium mi dolor et nisl.</string>
+    <string name="button1Text">Report</string>
+    <string name="title_activity_report">ReportActivity</string>
+
+    <string name="button2Text">Take picture</string>
+    <string name="button3Text">GPS Position</string>
+    <string name="button4Text">Call me</string>
+    <string name="buttonBackText">Back</string>
+    <string name="buttonSendText">Send</string>
+</resources>

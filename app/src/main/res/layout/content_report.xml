@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
+    android:background="@android:color/black"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="csi.fhict.org.csi_week_1.ReportActivity"
+    tools:showIn="@layout/activity_report">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/button2Text"
+            android:layout_alignParentLeft="true"/>
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/button3Text"
+            android:layout_alignParentRight="true"/>
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/imageReport"
+        android:layout_width="fill_parent"
+        android:layout_height="200dp"
+        android:contentDescription="@string/description"
+        android:src="@drawable/hacker"
+        android:layout_marginTop="@dimen/activity_horizontal_margin"
+        android:layout_gravity="top" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/button4Text"
+            android:layout_centerInParent="true"/>
+
+        <Button
+            android:id="@+id/buttonBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/button4"
+            android:layout_alignParentLeft="true"
+            android:text="@string/buttonBackText"/>
+
+        <Button
+            android:id="@+id/buttonSend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/button4"
+            android:layout_alignParentRight="true"
+            android:text="@string/buttonSendText"/>
+    </RelativeLayout>
+
+
+
+</LinearLayout>
