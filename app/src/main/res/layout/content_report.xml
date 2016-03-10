@@ -21,17 +21,14 @@
 
         <Button
             android:id="@+id/button2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            style="@style/buttonLeftStyle"
             android:text="@string/button2Text"
-            android:layout_alignParentLeft="true"/>
+            />
 
         <Button
             android:id="@+id/button3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/button3Text"
-            android:layout_alignParentRight="true"/>
+            style="@style/buttonRightStyle"
+            android:text="@string/button3Text" />
     </RelativeLayout>
 
     <ImageView
@@ -43,30 +40,31 @@
         android:layout_marginTop="@dimen/activity_horizontal_margin"
         android:layout_gravity="top" />
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/lineshape">
+
+    </LinearLayout>
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <Button
             android:id="@+id/button4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/button4Text"
-            android:layout_centerInParent="true"/>
+            style="@style/buttonCenterStyle"
+            android:text="@string/button4Text"/>
 
         <Button
             android:id="@+id/buttonBack"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:layout_below="@+id/button4"
-            android:layout_alignParentLeft="true"
+            style="@style/buttonLeftStyle"
             android:text="@string/buttonBackText"/>
 
         <Button
             android:id="@+id/buttonSend"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            style="@style/buttonRightStyle"
             android:layout_below="@+id/button4"
-            android:layout_alignParentRight="true"
             android:text="@string/buttonSendText"/>
     </RelativeLayout>
 

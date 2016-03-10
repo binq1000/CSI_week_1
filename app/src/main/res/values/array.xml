@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="criminalList">
+        <item name="crimialName1">Henk</item>
+        <item name="crimialName2">Piet</item>
+        <item name="crimialName3">Jan</item>
+        <item name="crimialName4">Pedro</item>
+        <item name="crimialName5">Joost</item>
+    </string-array>
+
+    <integer-array name="criminalsImageList">
+        <item>@drawable/criminal1</item>
+        <item name="criminal2">@drawable/criminal2</item>
+        <item name="criminal3">@drawable/criminal3</item>
+        <item name="criminal4">@drawable/criminal4</item>
+        <item name="criminal5">@drawable/criminal5</item>
+    </integer-array>
+
+    <array name="criminalsImageList2">
+        <item name="criminal1">@drawable/criminal1</item>
+        <item name="criminal2">@drawable/criminal2</item>
+        <item name="criminal3">@drawable/criminal3</item>
+        <item name="criminal4">@drawable/criminal4</item>
+        <item name="criminal5">@drawable/criminal5</item>
+    </array>
+</resources>

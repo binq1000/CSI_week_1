@@ -36,37 +36,21 @@
                 android:layout_marginBottom="10px">
                 <TextView
                     android:id="@+id/nameText"
-                    android:layout_height="wrap_content"
-                    android:layout_width="0px"
-                    android:layout_weight="4"
-                    android:gravity="center"
-                    android:textColor="@color/greenishh"
+                    style="@style/greenTableRowTextview"
                     android:text="@string/nameText" />
                 <TextView android:id="@+id/name"
-                    android:layout_height="wrap_content"
-                    android:layout_width="0px"
-                    android:layout_weight="6"
-                    android:text="@string/name"
-                    android:textColor="@color/greenishh"
-                    android:gravity="center" />
+                    style="@style/greenTableRowTextview"
+                    android:text="@string/name"/>
             </TableRow>
             <TableRow
                 android:background="#690c5029"
                 android:layout_marginBottom="10px">
                 <TextView
                     android:id="@+id/genderText"
-                    android:layout_height="wrap_content"
-                    android:layout_width="0px"
-                    android:layout_weight="4"
-                    android:gravity="center"
-                    android:textColor="@color/greenishh"
+                    style="@style/greenTableRowTextview"
                     android:text="@string/genderText"/>
                 <TextView android:id="@+id/gender"
-                    android:layout_height="wrap_content"
-                    android:layout_width="0px"
-                    android:layout_weight="6"
-                    android:gravity="center"
-                    android:textColor="@color/greenishh"
+                    style="@style/greenTableRowTextview"
                     android:text="@string/gender"/>
             </TableRow>
             <TableRow
@@ -74,36 +58,20 @@
                 android:layout_marginBottom="10px">
                 <TextView
                     android:id="@+id/ageText"
-                    android:layout_height="wrap_content"
-                    android:layout_width="0px"
-                    android:layout_weight="4"
-                    android:gravity="center"
-                    android:textColor="@color/greenishh"
+                    style="@style/greenTableRowTextview"
                     android:text="@string/ageText"/>
                 <TextView android:id="@+id/age"
-                    android:layout_height="wrap_content"
-                    android:layout_width="0px"
-                    android:layout_weight="6"
-                    android:gravity="center"
-                    android:textColor="@color/greenishh"
+                    style="@style/greenTableRowTextview"
                     android:text="@string/age"/>
             </TableRow>
             <TableRow
                 android:background="#690c5029">
                 <TextView
                     android:id="@+id/bountyText"
-                    android:layout_height="wrap_content"
-                    android:layout_width="0px"
-                    android:layout_weight="4"
-                    android:gravity="center"
-                    android:textColor="@color/greenishh"
+                    style="@style/greenTableRowTextview"
                     android:text="@string/bountyText"/>
                 <TextView android:id="@+id/bounty"
-                    android:layout_height="wrap_content"
-                    android:layout_width="0px"
-                    android:layout_weight="6"
-                    android:gravity="center"
-                    android:textColor="@color/greenishh"
+                    style="@style/greenTableRowTextview"
                     android:text="@string/bounty"/>
             </TableRow>
         </TableLayout>
@@ -132,9 +100,7 @@
         </ScrollView>
         <Button
             android:id="@+id/button1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/button1Text"
-            android:layout_gravity="center"/>
+            style="@style/buttonCenterStyleLinear"
+            android:text="@string/button1Text" />
     </LinearLayout>
     </LinearLayout>
