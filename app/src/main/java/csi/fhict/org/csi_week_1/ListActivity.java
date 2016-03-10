@@ -49,17 +49,7 @@ public class ListActivity extends AppCompatActivity {
 
     public void setWebAndImages() {
         web = getResources().getStringArray(R.array.criminalList);
-        int place = 0;
         imageID = getResourceID();
-
-//        int[] imageArray = getResources().getIntArray(R.array.criminalsImageList);
-//        imageID = new Integer[imageArray.length];
-//        for (int i : imageArray) {
-//            imageID[place] = i;
-//            place++;
-//        }
-
-
     }
 
 
@@ -67,9 +57,9 @@ public class ListActivity extends AppCompatActivity {
         Resources res = getResources();
         TypedArray images = res.obtainTypedArray(R.array.criminalsImageList2);
 
-        Integer[] returnvalue = new Integer[images.getIndexCount()];
-        for (int i=0; i < images.getIndexCount(); i++) {
-            returnvalue[i] = images.getIndex(i);
+        Integer[] returnvalue = new Integer[images.length()];
+        for (int i=0; i <= images.length(); i++) {
+            returnvalue[i] = images.getResourceId(i, 0);
         }
 
 
