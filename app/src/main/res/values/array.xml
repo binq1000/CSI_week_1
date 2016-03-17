@@ -9,15 +9,7 @@
         <item name="crimialName5">Joost</item>
     </string-array>
 
-    <integer-array name="criminalsImageList">
-        <item>@drawable/criminal1</item>
-        <item name="criminal2">@drawable/criminal2</item>
-        <item name="criminal3">@drawable/criminal3</item>
-        <item name="criminal4">@drawable/criminal4</item>
-        <item name="criminal5">@drawable/criminal5</item>
-    </integer-array>
-
-    <array name="criminalsImageList2">
+    <array name="criminalsImageList">
         <item name="criminal1">@drawable/criminal1</item>
         <item name="criminal2">@drawable/criminal2</item>
         <item name="criminal3">@drawable/criminal3</item>

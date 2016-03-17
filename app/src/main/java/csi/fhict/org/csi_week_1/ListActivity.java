@@ -1,5 +1,6 @@
 package csi.fhict.org.csi_week_1;
 
+import android.content.Intent;
 import android.content.res.Resources;
 import android.content.res.TypedArray;
 import android.os.Bundle;
@@ -37,6 +38,7 @@ public class ListActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view,
                                     int position, long id) {
                 Toast.makeText(ListActivity.this, "You Clicked at " + web[+position], Toast.LENGTH_SHORT).show();
+                goToNextScreen(web[+position]);
 
             }
         });
@@ -47,6 +49,12 @@ public class ListActivity extends AppCompatActivity {
 
     }
 
+    public void goToNextScreen(String name) {
+        Intent intent = new Intent(this, MainActivity.class);
+        intent.putExtra("name", name);
+        startActivity(intent);
+    }
+
     public void setWebAndImages() {
         web = getResources().getStringArray(R.array.criminalList);
         imageID = getResourceID();
@@ -55,10 +63,10 @@ public class ListActivity extends AppCompatActivity {
 
     public Integer[] getResourceID() {
         Resources res = getResources();
-        TypedArray images = res.obtainTypedArray(R.array.criminalsImageList2);
+        TypedArray images = res.obtainTypedArray(R.array.criminalsImageList);
 
         Integer[] returnvalue = new Integer[images.length()];
-        for (int i=0; i <= images.length(); i++) {
+        for (int i=0; i < images.length(); i++) {
             returnvalue[i] = images.getResourceId(i, 0);
         }
 

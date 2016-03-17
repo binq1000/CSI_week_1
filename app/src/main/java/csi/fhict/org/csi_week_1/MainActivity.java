@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -19,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
+        setData();
         Button b = (Button)findViewById(R.id.button1);
         b.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -32,6 +33,13 @@ public class MainActivity extends AppCompatActivity {
     public void goToReportScreen() {
         Intent intent = new Intent(this, ReportActivity.class);
         startActivity(intent);
+    }
+
+    public void setData() {
+        Intent intent = getIntent();
+        String name = intent.getStringExtra("name");
+        TextView nameText = (TextView) findViewById(R.id.name);
+        nameText.setText(name);
     }
 
     @Override
