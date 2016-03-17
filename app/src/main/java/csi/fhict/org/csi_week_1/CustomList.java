@@ -11,17 +11,29 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class CustomList extends ArrayAdapter<String>{
+import java.util.ArrayList;
+import java.util.List;
+
+public class CustomList extends ArrayAdapter<Criminal>{
 
     private final Activity context;
-    private final String[] web;
-    private final Integer[] imageId;
+    private final List<Criminal> criminals;
+//    private final String[] web;
+//    private final Integer[] imageId;
+//    public CustomList(Activity context,
+//                      String[] web, Integer[] imageId) {
+//        super(context, R.layout.list_single, web);
+//        this.context = context;
+//        this.web = web;
+//        this.imageId = imageId;
+//
+//    }
+
     public CustomList(Activity context,
-                      String[] web, Integer[] imageId) {
-        super(context, R.layout.list_single, web);
+                      List<Criminal> criminals) {
+        super(context, R.layout.list_single, criminals);
         this.context = context;
-        this.web = web;
-        this.imageId = imageId;
+        this.criminals = criminals;
 
     }
     @Override
@@ -29,11 +41,17 @@ public class CustomList extends ArrayAdapter<String>{
         LayoutInflater inflater = context.getLayoutInflater();
         View rowView= inflater.inflate(R.layout.list_single, null, true);
         TextView txtTitle = (TextView) rowView.findViewById(R.id.txt);
+        TextView bountyText = (TextView) rowView.findViewById(R.id.SingleBounty);
+
+        Criminal requestedCriminal = criminals.get(position);
 
         ImageView imageView = (ImageView) rowView.findViewById(R.id.img);
-        txtTitle.setText(web[position]);
+        txtTitle.setText("Name: " + requestedCriminal.name);
+        bountyText.setText("Bounty: " + String.valueOf(requestedCriminal.getBountyInDollars()));
 
-        imageView.setImageResource(imageId[position]);
+//        imageView.setImageResource(imageId[position]);
+//        imageView.setImageDrawable(requestedCriminal.mugshot);
+        imageView.setImageResource(requestedCriminal.imageID);
         return rowView;
     }
 }

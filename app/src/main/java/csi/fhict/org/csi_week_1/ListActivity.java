@@ -1,5 +1,6 @@
 package csi.fhict.org.csi_week_1;
 
+import android.app.Application;
 import android.content.Intent;
 import android.content.res.Resources;
 import android.content.res.TypedArray;
@@ -14,6 +15,7 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class ListActivity extends AppCompatActivity {
 
@@ -27,9 +29,13 @@ public class ListActivity extends AppCompatActivity {
         setContentView(R.layout.activity_list);
 
 
-        setWebAndImages();
+        CriminalProvider cp = new CriminalProvider(getApplicationContext());
+        final List<Criminal> criminals = cp.GetCriminals();
+
+//        setWebAndImages();
+
         CustomList adapter = new
-                CustomList(ListActivity.this, web, imageID);
+                CustomList(ListActivity.this, criminals);
         list=(ListView)findViewById(R.id.list);
         list.setAdapter(adapter);
         list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -37,8 +43,7 @@ public class ListActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view,
                                     int position, long id) {
-                Toast.makeText(ListActivity.this, "You Clicked at " + web[+position], Toast.LENGTH_SHORT).show();
-                goToNextScreen(web[+position]);
+                goToNextScreen(criminals.get(+position));
 
             }
         });
@@ -49,9 +54,9 @@ public class ListActivity extends AppCompatActivity {
 
     }
 
-    public void goToNextScreen(String name) {
+    public void goToNextScreen(Criminal criminal) {
         Intent intent = new Intent(this, MainActivity.class);
-        intent.putExtra("name", name);
+        intent.putExtra("criminal", criminal);
         startActivity(intent);
     }
 

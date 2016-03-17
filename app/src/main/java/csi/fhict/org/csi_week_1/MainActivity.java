@@ -10,9 +10,14 @@ import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.ListView;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
+
+    private Criminal receivedCriminal;
+    ListView list;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,7 +25,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
         setData();
+
         Button b = (Button)findViewById(R.id.button1);
         b.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -28,6 +35,10 @@ public class MainActivity extends AppCompatActivity {
                 goToReportScreen();
             }
         });
+
+        CrimeListAdapter adapter = new CrimeListAdapter(MainActivity.this, receivedCriminal.crimes);
+        list = (ListView) findViewById(R.id.crimeList);
+        list.setAdapter(adapter);
     }
 
     public void goToReportScreen() {
@@ -37,9 +48,24 @@ public class MainActivity extends AppCompatActivity {
 
     public void setData() {
         Intent intent = getIntent();
-        String name = intent.getStringExtra("name");
+
+        receivedCriminal = (Criminal) intent.getSerializableExtra("criminal");
+
         TextView nameText = (TextView) findViewById(R.id.name);
-        nameText.setText(name);
+        TextView genderText = (TextView) findViewById(R.id.gender);
+        TextView descriptionText = (TextView) findViewById(R.id.description);
+        TextView ageText = (TextView) findViewById(R.id.age);
+        TextView bountyText = (TextView) findViewById(R.id.bounty);
+        ImageView image = (ImageView) findViewById(R.id.image);
+
+//        image.setImageDrawable(receivedCriminal.mugshot);
+        image.setImageResource(receivedCriminal.imageID);
+
+        nameText.setText(receivedCriminal.name);
+        genderText.setText(receivedCriminal.gender);
+        descriptionText.setText(receivedCriminal.description);
+        ageText.setText(String.valueOf(receivedCriminal.age));
+        bountyText.setText(String.valueOf(receivedCriminal.getBountyInDollars()));
     }
 
     @Override
