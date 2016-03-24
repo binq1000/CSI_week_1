@@ -51,7 +51,11 @@ public class CustomList extends ArrayAdapter<Criminal>{
 
 //        imageView.setImageResource(imageId[position]);
 //        imageView.setImageDrawable(requestedCriminal.mugshot);
-        imageView.setImageResource(requestedCriminal.imageID);
+        try {
+            imageView.setImageResource(requestedCriminal.imageID);
+        } catch (OutOfMemoryError oome) {
+            System.out.println("Out of Memory");
+        }
         return rowView;
     }
 }

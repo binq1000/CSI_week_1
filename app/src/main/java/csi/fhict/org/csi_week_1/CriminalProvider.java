@@ -96,7 +96,7 @@ public class CriminalProvider {
 //			someCriminal.lastKnownLocation = new Location("");
 //			someCriminal.lastKnownLocation.setLatitude(-180.0 + r.nextDouble() * 180.0);
 //			someCriminal.lastKnownLocation.setLongitude(-180.0 + r.nextDouble() * 180.0);
-			someCriminal.latitude = (-180.0 + r.nextDouble() * 180.0);
+			someCriminal.latitude = (-90.0 + r.nextDouble() * 90.0);
 			someCriminal.longitude = (-180.0 + r.nextDouble() * 180.0);
 			
 			someCriminal.crimes = new ArrayList<Crime>();

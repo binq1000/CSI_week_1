@@ -59,7 +59,11 @@ public class MainActivity extends AppCompatActivity {
         ImageView image = (ImageView) findViewById(R.id.image);
 
 //        image.setImageDrawable(receivedCriminal.mugshot);
-        image.setImageResource(receivedCriminal.imageID);
+        try {
+            image.setImageResource(receivedCriminal.imageID);
+        } catch (OutOfMemoryError oome) {
+            System.out.println("Out of memory once more");
+        }
 
         nameText.setText(receivedCriminal.name);
         genderText.setText(receivedCriminal.gender);
